@@ -12,7 +12,7 @@ import Theme from "../../theme";
 import * as S from "./ViewCinema.style";
 import { IoTrashOutline } from "react-icons/io5";
 
-const url = "https://devmoviebe.azurewebsites.net";
+const url = "http://localhost:8080";
 
 function ViewCinema() {
   const auth = useContext(AuthContext);
@@ -155,9 +155,9 @@ function ViewCinema() {
                     <tr key={cinema.id}>
                       <td>{cinema.id}</td>
                       <td>{cinema.title}</td>
-                      <td>{cinema.rows}</td>
+                      <td>{cinema.row_count}</td>
                       <td>{cinema.row_seats}</td>
-                      <td>{cinema.rows * cinema.row_seats}</td>
+                      <td>{cinema.row_count * cinema.row_seats}</td>
                       <td>
                         <S.DeleteBtn onClick={() => DeleteCinema(cinema.id)}>
                           <IoTrashOutline color="white" size="1.5em" />

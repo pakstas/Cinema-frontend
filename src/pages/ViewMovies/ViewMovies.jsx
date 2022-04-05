@@ -7,7 +7,7 @@ import * as S from "./ViewMovies.style";
 import { IoTrashOutline } from "react-icons/io5";
 import { FiEdit } from "react-icons/fi";
 
-const url = "https://devmoviebe.azurewebsites.net";
+const url = "http://localhost:8080";
 
 function ViewMovies() {
   const auth = useContext(AuthContext);

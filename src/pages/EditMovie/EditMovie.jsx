@@ -12,7 +12,7 @@ import {
 import * as S from "./EditMovie.style";
 import Theme from "../../theme";
 
-const url = "https://devmoviebe.azurewebsites.net";
+const url = "http://localhost:8080";
 
 function EditMovie() {
   const { movieId } = useParams();

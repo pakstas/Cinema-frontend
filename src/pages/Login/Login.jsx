@@ -4,7 +4,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { Section, Button, InputField, Notification } from "../../components";
 import * as S from "./Login.style";
 
-const url = "https://devmoviebe.azurewebsites.net";
+const url = "http://localhost:8080";
 
 function LoginUser(data, setError, setMessage, setErrorType, history, auth) {
   let success = false;

@@ -11,7 +11,7 @@ import { Theme } from "../../theme";
 import * as S from "./ViewTicketsAll.style";
 import { IoTrashOutline } from "react-icons/io5";
 
-const url = "https://devmoviebe.azurewebsites.net";
+const url = "http://localhost:8080";
 
 function ViewTicketsAll() {
   const [data, setData] = useState();

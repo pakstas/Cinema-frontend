@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Logo = styled.img`
-  max-height: 40px;
+  max-height: 50px;
   max-width: 100%;
-  filter: brightness(100);
   display: flex;
   justify-content: center;
   align-items: center;
   &:hover {
-    filter: brightness(0);
+    box-shadow: 0em 0.5em 1.25em 0em rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
   }
 `;
 
