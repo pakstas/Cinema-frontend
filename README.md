@@ -9,7 +9,7 @@ Access my site at [cinema.pakstas.com](http://cinema.pakstas.com)
 
 - [About The App ](#about-the-app)
 - [Screenshots](#screenshots)
-- [Technologies](#technologies)
+- [Technologies](#:building_construction:-technologies)
 - [Setup](#setup)
 - [Status](#status)
 
