@@ -7,8 +7,8 @@ Access my site at [cinema.pakstas.com](http://cinema.pakstas.com)
 
 ## :file_folder: Table of Content: 
 
-- [ :page_with_curl: About The App ](#about-the-app)
-- [:framed_picture: Screenshots](#screenshots)
+- [ :page_with_curl: About The App ](##about-the-app)
+- [:framed_picture: Screenshots](##screenshots)
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Status](#status)
