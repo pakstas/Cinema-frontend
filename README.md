@@ -1,10 +1,11 @@
-# Project Title 
-Cinema App :movie_camera:
+# :movie_camera: Cinema App
 
-## Demo link: :globe_with_meridians:
+
+## :globe_with_meridians: Demo link:
 Access my site at [cinema.pakstas.com](cinema.pakstas.com)
 
-## Table of Content: :file_folder:
+
+## :file_folder: Table of Content: 
 
 - [About The App](#about-the-app)
 - [Screenshots](#screenshots)
@@ -12,20 +13,25 @@ Access my site at [cinema.pakstas.com](cinema.pakstas.com)
 - [Setup](#setup)
 - [Status](#status)
 
-## About The App :page_with_curl:
+
+## :page_with_curl: About The App 
 [Name of project] is an app that ...
 
-## Screenshots :framed_picture:
+
+## :framed_picture: Screenshots 
 
 `![Writing](https://unsplash.com/photos/VBPzRgd7gfc)`
 
-## Technologies :building_construction:
+
+## :building_construction: Technologies 
 I used `html`, `css`, ...
 
-## Setup :wrench:
+
+## :wrench: Setup 
 - download or clone the repository
 - run `npm install`
 - ...
 
-## Status :stopwatch:
+
+## :stopwatch: Status 
 [name of project] is still in progress. `Version 2` will be out soon.
