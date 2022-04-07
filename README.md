@@ -2,7 +2,7 @@
 
 
 ## :globe_with_meridians: Demo link:
-Access my site at [cinema.pakstas.com](cinema.pakstas.com)
+Access my site at [cinema.pakstas.com](http://cinema.pakstas.com)
 
 
 ## :file_folder: Table of Content: 
