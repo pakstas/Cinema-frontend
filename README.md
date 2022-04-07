@@ -7,31 +7,31 @@ Access my site at [cinema.pakstas.com](http://cinema.pakstas.com)
 
 ## :file_folder: Table of Content: 
 
-- [About The App ](#about-the-app)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Status](#status)
+- [About The App :page_with_curl:](#about-the-app)
+- [Screenshots :framed_picture:](#screenshots)
+- [Technologies :building_construction:](#technologies)
+- [Setup :wrench:](#setup)
+- [Status :stopwatch:](#status)
 
 
 ## About The App 
-:page_with_curl: [Name of project] is an app that ...
+[Name of project] is an app that ...
 
 
 ## Screenshots 
 
-:framed_picture: `![Writing](https://unsplash.com/photos/VBPzRgd7gfc)`
+`![Writing](https://unsplash.com/photos/VBPzRgd7gfc)`
 
 
-## :building_construction: Technologies 
+## Technologies 
 I used `html`, `css`, ...
 
 
-## :wrench: Setup 
+## Setup 
 - download or clone the repository
 - run `npm install`
 - ...
 
 
-## :stopwatch: Status 
+## Status 
 [name of project] is still in progress. `Version 2` will be out soon.
