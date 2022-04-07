@@ -34,11 +34,13 @@ Basic User can:
 ![Second ex.](https://i.ibb.co/7gh60Qn/2.png)
 ![Third ex.](https://i.ibb.co/yWBpSYP/3.png)
 ![Fourth ex.](https://i.ibb.co/vzf8k8S/4.png)
+<img src="https://i.ibb.co/yWBpSYP/3.png" width=50% height=50%>
 
 
 ## Technologies 
 I used primary `html`, `css`, `react-js`.
 Under the hood I had to use `styled-components`, `jwt-decode`, `react hooks and contexts`, `responsive design` techniques.
+
 This web app is connected with backend `Node.js` server and `MariaDB`. You can check the code of it on [github](https://github.com/pakstas/Cinema-backend).
 
 
