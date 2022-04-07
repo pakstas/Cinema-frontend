@@ -7,20 +7,20 @@ Access my site at [cinema.pakstas.com](http://cinema.pakstas.com)
 
 ## :file_folder: Table of Content: 
 
-- [ :page_with_curl: About The App ](##about-the-app)
-- [:framed_picture: Screenshots](##screenshots)
+- [About The App ](#about-the-app)
+- [Screenshots](#screenshots)
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Status](#status)
 
 
-## :page_with_curl: About The App 
-[Name of project] is an app that ...
+## About The App 
+:page_with_curl: [Name of project] is an app that ...
 
 
-## :framed_picture: Screenshots 
+## Screenshots 
 
-`![Writing](https://unsplash.com/photos/VBPzRgd7gfc)`
+:framed_picture: `![Writing](https://unsplash.com/photos/VBPzRgd7gfc)`
 
 
 ## :building_construction: Technologies 
