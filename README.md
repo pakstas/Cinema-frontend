@@ -30,10 +30,10 @@ Basic User can:
 
 ## Screenshots 
 
-![First](https://i.ibb.co/bNnr3Ds/1.png)
-![Second](https://i.ibb.co/7gh60Qn/2.png)
-![Third](https://i.ibb.co/yWBpSYP/3.png)
-![Fourth](https://i.ibb.co/vzf8k8S/4.png)
+![First ex.](https://i.ibb.co/bNnr3Ds/1.png)
+![Second ex.](https://i.ibb.co/7gh60Qn/2.png)
+![Third ex.](https://i.ibb.co/yWBpSYP/3.png)
+![Fourth ex.](https://i.ibb.co/vzf8k8S/4.png)
 
 
 ## Technologies 
