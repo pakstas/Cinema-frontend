@@ -32,7 +32,7 @@ Basic User can:
 
 ![First ex.](https://i.ibb.co/bNnr3Ds/1.png)
 ![Second ex.](https://i.ibb.co/7gh60Qn/2.png)
-![Third ex.](https://i.ibb.co/yWBpSYP/3.png)
+![Third ex.](https://i.postimg.cc/vm6xwsXm/3.png)
 ![Fourth ex.](https://i.ibb.co/vzf8k8S/4.png)
 
 ## Technologies 
