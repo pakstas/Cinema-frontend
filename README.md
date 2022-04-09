@@ -30,10 +30,10 @@ Basic User can:
 
 ## Screenshots 
 
-![First ex.](https://i.ibb.co/bNnr3Ds/1.png)
-![Second ex.](https://i.ibb.co/7gh60Qn/2.png)
+![First ex.](https://i.postimg.cc/jS2JvN7P/1.png)
+![Second ex.](https://i.postimg.cc/j50wsFk4/2.png)
 ![Third ex.](https://i.postimg.cc/vm6xwsXm/3.png)
-![Fourth ex.](https://i.ibb.co/vzf8k8S/4.png)
+![Fourth ex.](https://i.postimg.cc/3xq0qRX6/4.png)
 
 ## Technologies 
 I used primary `html`, `css`, `react-js`.
