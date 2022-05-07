@@ -12,7 +12,7 @@ import Theme from "../../theme";
 import * as S from "./ViewCinema.style";
 import { IoTrashOutline } from "react-icons/io5";
 
-const url = "http://localhost:8080";
+const url = "https://metal-marshy-burst.glitch.me/";
 
 function ViewCinema() {
   const auth = useContext(AuthContext);

@@ -5,7 +5,7 @@ import { Section, Button, Notification, PageTitle } from "../../components";
 import * as S from "./BookTickets.style";
 import Theme from "../../theme";
 
-const url = "http://localhost:8080";
+const url = "https://metal-marshy-burst.glitch.me/";
 
 function BookTickets() {
   const { showtimeId } = useParams();

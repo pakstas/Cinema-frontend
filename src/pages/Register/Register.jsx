@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Section, InputField, Button, Notification } from "../../components";
 import * as S from "./Register.style";
 
-const url = "http://localhost:8080";
+const url = "https://metal-marshy-burst.glitch.me/";
 
 function RegisterUser(data, setError, setMessage, setErrorType) {
   let success = false;

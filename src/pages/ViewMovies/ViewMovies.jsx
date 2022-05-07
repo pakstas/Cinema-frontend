@@ -7,7 +7,7 @@ import * as S from "./ViewMovies.style";
 import { IoTrashOutline } from "react-icons/io5";
 import { FiEdit } from "react-icons/fi";
 
-const url = "http://localhost:8080";
+const url = "https://metal-marshy-burst.glitch.me/";
 
 function ViewMovies() {
   const auth = useContext(AuthContext);

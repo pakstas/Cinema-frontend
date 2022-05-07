@@ -4,7 +4,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { Section, Button, InputField, Notification } from "../../components";
 import * as S from "./Login.style";
 
-const url = "http://localhost:8080";
+const url = "https://metal-marshy-burst.glitch.me/";
 
 function LoginUser(data, setError, setMessage, setErrorType, history, auth) {
   let success = false;

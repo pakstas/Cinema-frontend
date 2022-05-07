@@ -4,7 +4,7 @@ import { Section, Showtime, PageTitle } from "../../components";
 import * as S from "./Home.style";
 import Theme from "../../theme";
 
-const url = "http://localhost:8080";
+const url = "https://metal-marshy-burst.glitch.me/";
 
 function Home() {
   const history = useHistory();
