@@ -19,7 +19,7 @@ export const Button = styled.button`
   padding: 0.5em 2em;
   border-radius: 3em;
   cursor: pointer;
-  transition: 0.3s background-color ease-in-out;
+  transition: 0.3s all ease-in-out;
   &:hover {
     background: ${(props) =>
       props.color === "primary"

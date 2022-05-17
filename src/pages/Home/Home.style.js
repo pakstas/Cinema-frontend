@@ -1,17 +1,20 @@
 import styled from "styled-components";
+import img from "../../assets/photo.avif";
 
 export const Hero = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0em 20em 1.25em 0em rgba(0, 0, 0, 1);
+  // background-image: url(${img});
+  opacity: 0.5;
+  box-shadow: 0em 1em 1.25em 0em rgba(0, 0, 0, 1);
 `;
 
 export const HeroImg = styled.img`
   width: 100%;
-  max-height: 50vh;
   object-fit: cover;
   opacity: 0.5;
+  max-height: 50vh;
   box-shadow: 0em 0.5em 1.25em 0em rgba(0, 0, 0, 1);
 `;
 

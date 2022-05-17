@@ -50,13 +50,27 @@ export const StyledLink = styled(Link)`
   display: block;
   height: 100%;
   background: ${(props) => props.theme.color.red};
-  border-bottom: 0.5em solid ${(props) => props.theme.color.red};
-  border-top: 0.5em solid ${(props) => props.theme.color.red};
+  position: relative;
+  color: ${(props) => props.theme.color.mink};
+
+  // Border animation on hover
   &:hover {
-    border-bottom-color: ${(props) => props.theme.color.mink};
-    // background: ${(props) => props.theme.color.mink};
-    color: ${(props) => props.theme.color.mink};
-    // border-top-color: ${(props) => props.theme.color.mink};
+    border: none;
+    border-bottom: 0px solid ${(props) => props.theme.color.mink};
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0.5em;
+    left: 50%;
+    bottom: 0;
+    background-color: ${(props) => props.theme.color.mink};
+    transition: all ease-in-out 0.2s;
+  }
+  &:hover::after {
+    width: 100%;
+    left: 0;
   }
 `;
 
