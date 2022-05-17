@@ -139,36 +139,32 @@ function ViewTickets() {
           </thead>
           <tbody>
             {data &&
-              data.map((ticket) => (
-                <tr key={ticket.id}>
-                  <td>{ticket.id}</td>
-                  <td>{ticket.movie_title}</td>
-                  <td>
-                    {new Date(ticket.event_date).toLocaleDateString("LT-lt")}
-                  </td>
-                  <td>{ticket.event_time.toString().slice(0, 5)}</td>
-                  <td>{ticket.ticket_seat}</td>
-                  <td>{ticket.ticket_price.toFixed(2) + "\u20AC"}</td>
-                  <td>
-                    <S.DeleteBtn
-                      onClick={() => {
-                        setTicketId(ticket.id);
-                        setModal(true);
-                      }}
-                    >
-                      <IoTrashOutline color="white" size="1.5em" />
-                    </S.DeleteBtn>
-                    {/* <button
-                      onClick={() => {
-                        setTicketId(ticket.id);
-                        setModal(true);
-                      }}
-                    >
-                      <IoTrashOutline color="white" />
-                    </button> */}
-                  </td>
-                </tr>
-              ))}
+              data
+                .sort((a, b) => {
+                  return b.id - a.id;
+                })
+                .map((ticket) => (
+                  <tr key={ticket.id}>
+                    <td>{ticket.id}</td>
+                    <td>{ticket.movie_title}</td>
+                    <td>
+                      {new Date(ticket.event_date).toLocaleDateString("LT-lt")}
+                    </td>
+                    <td>{ticket.event_time.toString().slice(0, 5)}</td>
+                    <td>{ticket.ticket_seat}</td>
+                    <td>{ticket.ticket_price.toFixed(2) + "\u20AC"}</td>
+                    <td>
+                      <S.DeleteBtn
+                        onClick={() => {
+                          setTicketId(ticket.id);
+                          setModal(true);
+                        }}
+                      >
+                        <IoTrashOutline color="white" size="1.5em" />
+                      </S.DeleteBtn>
+                    </td>
+                  </tr>
+                ))}
           </tbody>
         </S.TicketsTable>
       )}
