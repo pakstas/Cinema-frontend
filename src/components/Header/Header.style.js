@@ -51,12 +51,12 @@ export const StyledLink = styled(Link)`
   height: 100%;
   background: ${(props) => props.theme.color.red};
   position: relative;
-  color: ${(props) => props.theme.color.mink};
 
   // Border animation on hover
   &:hover {
     border: none;
     border-bottom: 0px solid ${(props) => props.theme.color.mink};
+    color: ${(props) => props.theme.color.mink};
   }
   &::after {
     content: "";
