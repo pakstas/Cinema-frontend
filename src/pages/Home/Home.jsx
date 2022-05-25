@@ -4,39 +4,30 @@ import { Section, Showtime, PageTitle, Loading } from "../../components";
 import * as S from "./Home.style";
 import Theme from "../../theme";
 
+async function getShowtimes({ setLoading, setShowtimes }) {
+  try {
+    setLoading(true);
+    let response = await fetch(`${process.env.REACT_APP_BE_URL}/showtimes`);
+    if (!response.ok) {
+      console.log(`HTTP error: ${response.status}`);
+    }
+    let data = await response.json();
+    setShowtimes(data);
+    setLoading(false);
+  } catch (error) {
+    console.log(`Could not get showtimes: ${error}`);
+    setLoading(false);
+  }
+}
+
 function Home() {
   const history = useHistory();
   const [showtimes, setShowtimes] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getShowtimes();
-    // fetch(`${url}/showtimes`)
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setShowtimes(data);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     setShowtimes([]);
-    //   });
+    getShowtimes({ setShowtimes, setLoading });
   }, []);
-
-  async function getShowtimes() {
-    try {
-      setLoading(true);
-      let response = await fetch(`${process.env.REACT_APP_BE_URL}/showtimes`);
-      if (!response.ok) {
-        console.log(`HTTP error: ${response.status}`);
-      }
-      let data = await response.json();
-      setShowtimes(data);
-      setLoading(false);
-    } catch (error) {
-      console.log(`Could not get showtimes: ${error}`);
-      setLoading(false);
-    }
-  }
 
   return (
     <>
