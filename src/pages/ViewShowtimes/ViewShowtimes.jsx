@@ -50,7 +50,6 @@ function ViewShowtimes() {
         return res.json();
       })
       .then((res_data) => {
-        // console.log(res_data);
         if (success && res_data.affectedRows === 1) {
           !!update ? setUpdate(false) : setUpdate(true);
         } else {
