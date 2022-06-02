@@ -159,7 +159,6 @@ function ViewShowtimes() {
                 <tbody>
                   {data.map((showtime) => (
                     <tr key={showtime.show_id}>
-                      {console.log(showtime.date)}
                       <td>{showtime.show_id}</td>
                       <td>
                         {(showtime.date
