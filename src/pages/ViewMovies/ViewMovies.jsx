@@ -7,8 +7,6 @@ import * as S from "./ViewMovies.style";
 import { IoTrashOutline } from "react-icons/io5";
 import { FiEdit } from "react-icons/fi";
 
-const url = "https://metal-marshy-burst.glitch.me/";
-
 function ViewMovies() {
   const auth = useContext(AuthContext);
   const [data, setData] = useState();
@@ -22,7 +20,7 @@ function ViewMovies() {
     setLoading(true);
     setError(false);
     let success = false;
-    fetch(`${url}/movies/delete/${movie_id}`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/movies/delete/${movie_id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${auth.token}`,
@@ -55,7 +53,7 @@ function ViewMovies() {
     setLoading(true);
     setError(false);
     let success = false;
-    fetch(`${url}/movies`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/movies`, {
       headers: {
         Authorization: `Bearer ${auth.token}`,
       },

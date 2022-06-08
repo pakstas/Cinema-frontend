@@ -12,8 +12,6 @@ import {
 import * as S from "./AddMovie.style";
 import Theme from "../../theme";
 
-const url = "https://metal-marshy-burst.glitch.me/";
-
 function AddMovie() {
   const [data, setData] = useState({
     title: "",
@@ -36,7 +34,7 @@ function AddMovie() {
     setLoading(true);
     let success = false;
     if (movie && movie.title !== "") {
-      fetch(`${url}/movies/add`, {
+      fetch(`${process.env.REACT_APP_BE_URL}/movies/add`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${auth.token}`,

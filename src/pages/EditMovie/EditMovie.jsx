@@ -12,8 +12,6 @@ import {
 import * as S from "./EditMovie.style";
 import Theme from "../../theme";
 
-const url = "https://metal-marshy-burst.glitch.me/";
-
 function EditMovie() {
   const { movieId } = useParams();
   const [data, setData] = useState({
@@ -37,7 +35,7 @@ function EditMovie() {
     setLoading(true);
     let success = false;
     if (movie && id && movie.title !== "") {
-      fetch(`${url}/movies/update/${id}`, {
+      fetch(`${process.env.REACT_APP_BE_URL}/movies/update/${id}`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${auth.token}`,
@@ -75,7 +73,7 @@ function EditMovie() {
   useEffect(() => {
     if (movieId) {
       setLoading(true);
-      fetch(`${url}/movies/${movieId}`, {
+      fetch(`${process.env.REACT_APP_BE_URL}/movies/${movieId}`, {
         headers: {
           Authorization: `Bearer ${auth.token}`,
         },

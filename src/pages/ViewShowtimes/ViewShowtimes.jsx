@@ -12,8 +12,6 @@ import Theme from "../../theme";
 import * as S from "./ViewShowtimes.style";
 import { IoTrashOutline } from "react-icons/io5";
 
-const url = "https://metal-marshy-burst.glitch.me/";
-
 function ViewShowtimes() {
   const auth = useContext(AuthContext);
   const [data, setData] = useState();
@@ -35,7 +33,7 @@ function ViewShowtimes() {
     setError(false);
     let success = false;
     // fetch(`http://localhost:8080/showtime/add`, {
-    fetch(`${url}/showtime/add`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/showtime/add`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${auth.token}`,
@@ -70,7 +68,7 @@ function ViewShowtimes() {
     setLoading(true);
     setError(false);
     let success = false;
-    fetch(`${url}/showtime/delete/${show_id}`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/showtime/delete/${show_id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${auth.token}`,
@@ -103,7 +101,7 @@ function ViewShowtimes() {
     setLoading(true);
     setError(false);
     let success = false;
-    fetch(`${url}/showtimes/get/all`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/showtimes/get/all`, {
       headers: {
         Authorization: `Bearer ${auth.token}`,
       },

@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { Section, InputField, Button, Notification } from "../../components";
 import * as S from "./Register.style";
 
-const url = "https://metal-marshy-burst.glitch.me/";
-
 function RegisterUser(data, setError, setMessage, setErrorType) {
   let success = false;
   setError(false);
-  fetch(`${url}/register`, {
+  fetch(`${process.env.REACT_APP_BE_URL}/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

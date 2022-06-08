@@ -11,8 +11,6 @@ import { Theme } from "../../theme";
 import * as S from "./ViewTicketsAll.style";
 import { IoTrashOutline } from "react-icons/io5";
 
-const url = "https://metal-marshy-burst.glitch.me/";
-
 function ViewTicketsAll() {
   const [data, setData] = useState();
   const [error, setError] = useState(false);
@@ -27,7 +25,7 @@ function ViewTicketsAll() {
     setLoading(true);
     setError(false);
     let success = false;
-    fetch(`${url}/tickets/delete/${ticket_id}`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/tickets/delete/${ticket_id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${auth.token}`,
@@ -60,7 +58,7 @@ function ViewTicketsAll() {
     setLoading(true);
     setError(false);
     let success = false;
-    fetch(`${url}/tickets/all`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/tickets/all`, {
       headers: {
         Authorization: `Bearer ${auth.token}`,
       },

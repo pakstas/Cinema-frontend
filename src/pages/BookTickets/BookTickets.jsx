@@ -11,8 +11,6 @@ import {
 import * as S from "./BookTickets.style";
 import Theme from "../../theme";
 
-const url = "https://metal-marshy-burst.glitch.me/";
-
 function BookTickets() {
   const { showtimeId } = useParams();
   const history = useHistory();
@@ -37,7 +35,7 @@ function BookTickets() {
     };
     let success = false;
     setError(false);
-    fetch(`${url}/tickets`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/tickets`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${auth.token}`,
@@ -72,7 +70,7 @@ function BookTickets() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`${url}/showtimes/${showtimeId}`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/showtimes/${showtimeId}`, {
       headers: {
         Authorization: `Bearer ${auth.token}`,
       },

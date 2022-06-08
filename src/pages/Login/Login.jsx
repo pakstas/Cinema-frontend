@@ -4,12 +4,10 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { Section, Button, InputField, Notification } from "../../components";
 import * as S from "./Login.style";
 
-const url = "https://metal-marshy-burst.glitch.me/";
-
 function LoginUser(data, setError, setMessage, setErrorType, history, auth) {
   let success = false;
   setError(false);
-  fetch(`${url}/login`, {
+  fetch(`${process.env.REACT_APP_BE_URL}/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

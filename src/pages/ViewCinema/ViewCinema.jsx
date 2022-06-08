@@ -12,8 +12,6 @@ import Theme from "../../theme";
 import * as S from "./ViewCinema.style";
 import { IoTrashOutline } from "react-icons/io5";
 
-const url = "https://metal-marshy-burst.glitch.me/";
-
 function ViewCinema() {
   const auth = useContext(AuthContext);
   const [data, setData] = useState();
@@ -32,7 +30,7 @@ function ViewCinema() {
     setLoading(true);
     setError(false);
     let success = false;
-    fetch(`${url}/cinema/add`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/cinema/add`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${auth.token}`,
@@ -68,7 +66,7 @@ function ViewCinema() {
     setLoading(true);
     setError(false);
     let success = false;
-    fetch(`${url}/cinema/delete/${cinema_id}`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/cinema/delete/${cinema_id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${auth.token}`,
@@ -101,7 +99,7 @@ function ViewCinema() {
     setLoading(true);
     setError(false);
     let success = false;
-    fetch(`${url}/cinema`, {
+    fetch(`${process.env.REACT_APP_BE_URL}/cinema`, {
       headers: {
         Authorization: `Bearer ${auth.token}`,
       },
