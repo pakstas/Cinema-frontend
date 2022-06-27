@@ -95,3 +95,29 @@ export const DeleteBtn = styled.button`
     background: ${(props) => props.theme.color.blue};
   }
 `;
+
+export const PaginationBlock = styled.div`
+  width: 100%;
+  padding: 1em 0em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+export const Button = styled.button`
+  margin: 0 0.25em;
+  padding: 0.1rem 0.25rem;
+  outline: none;
+  border: 0.1em solid ${(props) => props.theme.color.mink};
+  font-size: 0.8rem;
+  background: none;
+  cursor: pointer;
+  &:hover {
+    background: ${(props) => props.theme.color.mink};
+
+    color: ${(props) => props.theme.color.white};
+  }
+  &:disabled {
+    background: ${(props) => props.theme.color.mink};
+  }
+`;

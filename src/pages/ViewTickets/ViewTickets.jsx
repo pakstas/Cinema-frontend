@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from "react";
-// import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import {
   Section,
@@ -20,8 +19,13 @@ function ViewTickets() {
   const [modal, setModal] = useState(false);
   const [ticketId, setTicketId] = useState(null);
   const [loading, setLoading] = useState(false);
-  // const history = useHistory();
   const auth = useContext(AuthContext);
+
+  const [showData, setShowData] = useState([]);
+  const [currentPage, setCurrentPage] = useState();
+  const [pageCount, setPageCount] = useState();
+  const [pageNumbers, setPageNumbers] = useState([]);
+  const rowsPerPage = 15;
 
   function DeleteTicket(ticket_id) {
     setLoading(true);
@@ -73,7 +77,12 @@ function ViewTickets() {
       })
       .then((data) => {
         if (success && data) {
-          setData(data);
+          setData(
+            data.sort((a, b) => {
+              return b.id - a.id;
+            })
+          );
+          setCurrentPage(1);
         } else {
           setError(true);
           setErrorType("danger");
@@ -87,6 +96,29 @@ function ViewTickets() {
       })
       .finally(() => setLoading(false));
   }, [auth.token]);
+
+  useEffect(() => {
+    if (data) {
+      setPageCount(Math.ceil(data.length / rowsPerPage));
+      let tableData = data.filter(
+        (element, index) =>
+          index < rowsPerPage * currentPage &&
+          index > rowsPerPage * currentPage - rowsPerPage
+      );
+      setShowData(tableData);
+    }
+  }, [data, currentPage]);
+
+  useEffect(() => {
+    if (pageCount > 1) {
+      let pagesArray = [];
+      for (let i = 1; i <= pageCount; i++) {
+        i === pageCount
+          ? pagesArray.push(i) && setPageNumbers(pagesArray)
+          : pagesArray.push(i);
+      }
+    }
+  }, [pageCount]);
 
   return (
     <Section background={Theme.color.blue} containerColor={Theme.color.white}>
@@ -122,26 +154,23 @@ function ViewTickets() {
         </div>
       )}
 
-      {data && (
-        <S.TicketsTable>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Movie</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Seat</th>
-              <th>Price</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data &&
-              data
-                .sort((a, b) => {
-                  return b.id - a.id;
-                })
-                .map((ticket) => (
+      {showData && (
+        <>
+          <S.TicketsTable>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Movie</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Seat</th>
+                <th>Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {showData &&
+                showData.map((ticket) => (
                   <tr key={ticket.id}>
                     <td>{ticket.id}</td>
                     <td>{ticket.movie_title}</td>
@@ -163,8 +192,24 @@ function ViewTickets() {
                     </td>
                   </tr>
                 ))}
-          </tbody>
-        </S.TicketsTable>
+            </tbody>
+          </S.TicketsTable>
+          {pageNumbers.length > 1 && (
+            <S.PaginationBlock>
+              {pageNumbers.map((item) =>
+                item !== currentPage ? (
+                  <S.Button key={item} onClick={() => setCurrentPage(item)}>
+                    {item}
+                  </S.Button>
+                ) : (
+                  <S.Button key={item} disabled>
+                    {item}
+                  </S.Button>
+                )
+              )}
+            </S.PaginationBlock>
+          )}
+        </>
       )}
     </Section>
   );
