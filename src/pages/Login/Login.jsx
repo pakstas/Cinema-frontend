@@ -41,7 +41,10 @@ function LoginUser(data, setError, setMessage, setErrorType, history, auth) {
 }
 
 function Login() {
-  const [data, setData] = useState({ email: "", password: "" });
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
   const [error, setError] = useState(false);
   const [errorType, setErrorType] = useState("");
   const [message, setMessage] = useState("");
@@ -71,12 +74,14 @@ function Login() {
               type="email"
               id="1"
               label="Email"
+              value={process.env.REACT_APP_LOGIN_DEMO_EMAIL}
               handleChange={(e) => setData({ ...data, email: e.target.value })}
             />
             <InputField
               type="password"
               id="2"
               label="Password"
+              value={process.env.REACT_APP_LOGIN_DEMO_PASSWORD}
               handleChange={(e) =>
                 setData({ ...data, password: e.target.value })
               }
