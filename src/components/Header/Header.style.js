@@ -25,8 +25,15 @@ export const Header = styled.header`
   z-index: 99;
   position: sticky;
 `;
-
-export const HeaderDiv = styled.div``;
+export const HeaderDiv = styled.div`
+  height: 100%;
+  @media screen and (max-width: 767px) {
+    display: none;
+    &.active {
+      display: initial;
+    }
+  }
+`;
 
 export const Actions = styled.nav`
   display: flex;
@@ -37,6 +44,20 @@ export const Actions = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 5em;
+    right: 0;
+    width: 100%;
+    height: 15em;
+    background: ${(props) => props.theme.color.red};
+    flex-wrap: wrap;
+    flex-direction: column;
+    && > a {
+      width: 100%;
+      height: 5em;
+    }
   }
 `;
 
@@ -72,49 +93,37 @@ export const StyledLink = styled(Link)`
     width: 100%;
     left: 0;
   }
-`;
 
-export const BurgerLink = styled(Link)`
-  text-align: center;
-  &:hover {
-    background: ${(props) => props.theme.color.mink};
-    color: ${(props) => props.theme.color.blue};
+  @media screen and (max-width: 767px) {
+    // height: 5em;
+    // width: 100%;
   }
-  text-decoration: none;
-  color: ${(props) => props.theme.color.white};
-  display: block;
-  padding: 1em 2em;
-  background: ${(props) => props.theme.color.red};
-  font-weight: bold;
 `;
 
 export const BurgerButton = styled.div`
-  display: inline-block;
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+  }
+  display: none;
   cursor: pointer;
-  width: 2em;
-  padding: 0.5em;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  background: ${(props) => props.theme.color.white};
+  width: 1.2em;
+  // padding: 0.25em;
   && div {
-    width: 2em;
-    height: 0.3em;
+    width: 1.2em;
+    height: 0.2em;
     background-color: ${(props) => props.theme.color.black};
-    margin: 0.4em 0;
+    margin: 0.2em 0;
     transition: 0.4s;
   }
   &.active {
     & div:nth-child(1) {
-      // transform: rotate(-45deg) translate(-0.55em, 0.375em);
-      transform: rotate(-45deg) translate(-0.5em, 0.5em);
+      transform: rotate(-45deg) translate(-0.28em, 0.3em);
     }
     & div:nth-child(2) {
       opacity: 0;
     }
     & div:nth-child(3) {
-      // transform: rotate(45deg) translate(-1.5em, -1.5em);
-      transform: rotate(45deg) translate(-0.5em, -0.5em);
+      transform: rotate(45deg) translate(-0.25em, -0.3em);
     }
   }
 `;
