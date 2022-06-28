@@ -103,7 +103,7 @@ function ViewTickets() {
       let tableData = data.filter(
         (element, index) =>
           index < rowsPerPage * currentPage &&
-          index > rowsPerPage * currentPage - rowsPerPage
+          index + 1 > rowsPerPage * currentPage - rowsPerPage
       );
       setShowData(tableData);
     }
