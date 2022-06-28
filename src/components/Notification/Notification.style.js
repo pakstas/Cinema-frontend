@@ -9,7 +9,7 @@ export const Notification = styled.div`
   width: 100%;
   padding: 1em 2em;
   background: ${(props) =>
-    props.color === "danger" ? props.theme.color.red : props.theme.color.mink};
+    props.color === "danger" ? props.theme.color.red : props.theme.color.white};
   border-radius: 4px;
   box-sizing: border-box;
   border: 1px solid ${(props) => props.theme.color.black};
