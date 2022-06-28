@@ -10,6 +10,7 @@ function InputField({
   max,
   step,
   value,
+  defaultValue,
   minlength,
   maxlength,
 }) {
@@ -24,6 +25,7 @@ function InputField({
         max={max}
         step={step}
         value={value}
+        defaultValue={defaultValue}
         minlength={minlength}
         maxlength={maxlength}
       />
