@@ -1,21 +1,36 @@
 import styled from "styled-components";
-import img from "../../assets/photo.avif";
 
-export const Hero = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // background-image: url(${img});
-  opacity: 0.5;
-  box-shadow: 0em 1em 1.25em 0em rgba(0, 0, 0, 1);
+const img =
+  "https://images.unsplash.com/photo-1545277517-919cb4049d52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
+
+export const Section = styled.section`
+  padding-top: 25rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 20%,
+      rgb(11, 19, 42, 1) 50%
+    ),
+    url(${img});
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @media only screen and (max-width: ${(props) => props.theme.screens.mobile}) {
+    padding-top: 20rem;
+  }
+  @media only screen and (max-width: 480px) {
+    padding-top: 12rem;
+  }
 `;
 
-export const HeroImg = styled.img`
-  width: 100%;
-  object-fit: cover;
-  opacity: 0.5;
-  max-height: 50vh;
-  box-shadow: 0em 0.5em 1.25em 0em rgba(0, 0, 0, 1);
+export const Container = styled.div`
+  background: ${(props) => props.theme.color.tint.white95};
+  @media only screen and (max-width: ${(props) => props.theme.screens.mobile}) {
+    max-width: ${(props) => props.theme.screens.mobile};
+  }
+  max-width: ${(props) => props.theme.screens.desktop};
+  padding: 2em;
+  border-radius: 1em 1em 0 0;
+  margin: 0 auto;
 `;
 
 export const WrapCards = styled.div`

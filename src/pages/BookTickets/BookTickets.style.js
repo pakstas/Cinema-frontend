@@ -1,5 +1,40 @@
 import styled from "styled-components";
 
+export const Section = styled.section`
+  padding-top: 25rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 25%,
+      rgb(11, 19, 42, 1) 55%
+    ),
+    url(${(props) => props.image});
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @media only screen and (max-width: ${(props) => props.theme.screens.mobile}) {
+    background-image: url(${(props) => props.image});
+    background-size: auto 28em;
+    background-position: center top;
+  }
+`;
+
+export const ContainerWrapper = styled.div`
+  background: ${(props) => props.theme.color.mink};
+  @media only screen and (max-width: ${(props) => props.theme.screens.mobile}) {
+    max-width: ${(props) => props.theme.screens.mobile};
+  }
+  max-width: ${(props) => props.theme.screens.desktop};
+  margin: 0 auto;
+  border-radius: 1em 1em 0 0;
+`;
+
+export const Container = styled.div`
+  background: ${(props) => props.theme.color.tint.white95};
+
+  padding: 2em;
+  border-radius: 1em 1em 0 0;
+`;
+
 export const Booking = styled.div``;
 
 export const SeatsScreen = styled.div`
@@ -51,23 +86,16 @@ export const Seat = styled.div`
 `;
 
 export const Hero = styled.section`
-  box-sizing: border-box;
-  background: url(${(props) => props.image});
-  bacgkround-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 30vw;
-  min-height: 30vh;
   display: flex;
   justify-content: center;
   && > div {
+    border-radius: 1rem 1rem 0 0;
     align-self: flex-end;
     max-width: ${(props) => props.theme.screens.desktop};
     width: 100%;
     padding: 1em 2em;
     color: ${(props) => props.theme.color.white};
-    background: ${(props) => props.theme.color.blue};
+    background: ${(props) => props.theme.color.mink};
     opacity: 0.9;
     display: flex;
     justify-content: space-between;
