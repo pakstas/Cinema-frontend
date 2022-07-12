@@ -16,6 +16,7 @@ export const Theme = {
     tint: {
       white30: "rgba(255, 255, 255, 0.3)",
       white45: "rgba(255, 255, 255, 0.45)",
+      white95: "rgba(255, 255, 255, 0.95)",
     },
     gradient:
       "linear-gradient(180deg, rgba(11,19,42,1) 0%, rgba(255,255,255,0.2553221972382703) 100%)",
