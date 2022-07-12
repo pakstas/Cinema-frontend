@@ -47,17 +47,13 @@ export const Actions = styled.nav`
   }
   @media screen and (max-width: 767px) {
     position: absolute;
+    left: 0;
     top: 5em;
-    right: 0;
     width: 100%;
-    height: 15em;
+    height: auto;
     background: ${(props) => props.theme.color.red};
     flex-wrap: wrap;
     flex-direction: column;
-    && > a {
-      width: 100%;
-      height: 5em;
-    }
   }
 `;
 
@@ -95,8 +91,8 @@ export const StyledLink = styled(Link)`
   }
 
   @media screen and (max-width: 767px) {
-    // height: 5em;
-    // width: 100%;
+    height: 4em;
+    width: 100%;
   }
 `;
 
