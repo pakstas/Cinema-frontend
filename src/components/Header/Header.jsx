@@ -18,11 +18,11 @@ function Header({ loggedIn, logout, admin }) {
 
         <S.HeaderDiv className={active ? "active" : ""}>
           <S.Actions>
-            <S.StyledLink to="/" onClick={toggleActive}>
+            <S.StyledLink to="/" onClick={active && toggleActive}>
               Home
             </S.StyledLink>
             {loggedIn && !admin && (
-              <S.StyledLink to="/tickets" onClick={toggleActive}>
+              <S.StyledLink to="/tickets" onClick={active && toggleActive}>
                 Tickets
               </S.StyledLink>
             )}
@@ -43,10 +43,10 @@ function Header({ loggedIn, logout, admin }) {
 
             {!loggedIn && (
               <>
-                <S.StyledLink to="/login" onClick={toggleActive}>
+                <S.StyledLink to="/login" onClick={active && toggleActive}>
                   Login
                 </S.StyledLink>
-                <S.StyledLink to="/register" onClick={toggleActive}>
+                <S.StyledLink to="/register" onClick={active && toggleActive}>
                   Register
                 </S.StyledLink>
               </>
